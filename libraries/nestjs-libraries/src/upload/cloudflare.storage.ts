@@ -19,7 +19,7 @@ class CloudflareStorage implements IUploadProvider {
     private _uploadUrl: string
   ) {
     this._client = new S3Client({
-      endpoint: `https://${accountID}.r2.cloudflarestorage.com`,
+      endpoint: `${accountID}`,
       region,
       credentials: {
         accessKeyId: accessKey,
